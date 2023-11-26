@@ -30,7 +30,7 @@ export const BluetoothScanner = () => {
         setScanning(true);
         if(manager){
             console.log('yes');
-        } //64:B7:08:6E:F0:6E
+        } //esp 1 : 64:B7:08:6E:F0:6E // esp 2 :
         manager.connectToDevice('64:B7:08:6E:F0:6E').then(connectedDevice => {
             setDevice(connectedDevice);
             return manager.discoverAllServicesAndCharacteristicsForDevice(connectedDevice.id);
